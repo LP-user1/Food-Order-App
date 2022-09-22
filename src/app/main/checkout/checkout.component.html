@@ -1,0 +1,77 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+        <div class="col-sm-8">
+          <form [formGroup]="checkOutForm">
+            <label for="" class="mt-2 mb-2">Name</label>
+            <input
+              type="text"
+              class="mb-2 form-control"
+              formControlName="Name"
+            />
+            <label for="" class="mb-2"> Email </label>
+            <input
+              type="email"
+              formControlName="Email"
+              class="mb-2 form-control"
+            />
+            <label for="" class="mb-2"> Address </label>
+            <textarea
+              type="text"
+              class="form-control mb-2"
+              formControlName="Address"
+            ></textarea>
+            <label for="" class="mb-2">Payment Method</label>
+            <select
+              formControlName="Payment"
+              class="form-select shadow-none mb-2 w-50"
+            >
+              <option selected disabled [ngValue]="null">Select one</option>
+              <option
+                class="select-option"
+                *ngFor="let paym of paymentMeth"
+                [ngValue]="paym"
+              >
+                {{ paym }}
+              </option>
+            </select>
+            <button
+              class="btn btn-success shadow bg-gradient"
+              (click)="placeOrder()"
+              type="submit"
+              [disabled]="!checkOutForm.valid"
+            >
+              Place order
+            </button>
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <div class="card shadow p-2">
+            <div class="card-title">
+              <h2 class="fw-light fs-3 text-center mt-3 mb-2">Payment Details</h2>
+              <hr>
+            </div>
+            <div class="card-body">
+              <div
+                class="card-content card-body"
+                *ngFor="let item of cart.items"
+              >
+                <span class="fw-lighter fs-3 me-3 ">{{ item.food.name }}</span>|
+                <span class="fw-lighter fs-5 ms-3">{{
+                  item.quantity | number
+                }}</span><br>
+                <span class="fw-lighter fs-5 me-2">{{
+                  item.price | currency: "INR"
+                }}</span>
+                <span class="fw-lighter fs-5 me-2">Total Price : {{
+                  cart.totalPrice | currency: "INR"
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

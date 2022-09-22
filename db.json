@@ -1,0 +1,419 @@
+{
+  "food": [
+    {
+      "id": 1,
+      "price": 10,
+      "name": "Pizza Pepperoni",
+      "favourite": false,
+      "star": "4.5",
+      "tags": [
+        "FastFood",
+        "Pizza",
+        "Lunch"
+      ],
+      "imageUrl": "/assets/pizza.jpg",
+      "cookTime": "10 - 20",
+      "origins": [
+        "Italy"
+      ]
+    },
+    {
+      "id": 2,
+      "price": 20,
+      "name": "dosa",
+      "favourite": false,
+      "star": "4.0",
+      "tags": [
+        "Breakfast",
+        "Dinner"
+      ],
+      "imageUrl": "/assets/dosa.jpg",
+      "cookTime": "10 - 20",
+      "origins": [
+        "Indian"
+      ]
+    },
+    {
+      "id": 3,
+      "price": 30,
+      "name": "Idly",
+      "favourite": true,
+      "star": "2.5",
+      "tags": [
+        "Breakfast",
+        "Idly",
+        "Dinner"
+      ],
+      "imageUrl": "/assets/idli.jpg",
+      "cookTime": "10 - 15",
+      "origins": [
+        "Indian"
+      ]
+    },
+    {
+      "id": 4,
+      "price": 50,
+      "name": "French Toast",
+      "favourite": true,
+      "star": "3.7",
+      "tags": [
+        "FastFood",
+        "toast",
+        "Breakfast"
+      ],
+      "imageUrl": "/assets/french-toast.jpg",
+      "cookTime": "10 - 25",
+      "origins": [
+        "France",
+        "Italy"
+      ]
+    },
+    {
+      "id": 5,
+      "price": 25,
+      "name": "Hamburger",
+      "favourite": false,
+      "star": "4.8",
+      "tags": [
+        "Burger",
+        "Lunch",
+        "Dinner"
+      ],
+      "imageUrl": "/assets/hamburger.jpg",
+      "cookTime": "15 - 25",
+      "origins": [
+        "U.S",
+        "UK"
+      ]
+    },
+    {
+      "id": 6,
+      "price": 40,
+      "name": "Pasta",
+      "favourite": true,
+      "star": "2.3",
+      "tags": [
+        "Pasta",
+        "Lunch"
+      ],
+      "imageUrl": "/assets/pasta.jpg",
+      "cookTime": "10 - 15",
+      "origins": [
+        "Chinese"
+      ]
+    },
+    {
+      "id": 7,
+      "price": 30,
+      "name": "Salad",
+      "favourite": true,
+      "star": "4.3",
+      "tags": [
+        "Breakfast",
+        "Salad"
+      ],
+      "imageUrl": "/assets/salad.jpg",
+      "cookTime": "12 - 30",
+      "origins": [
+        "Western",
+        "German"
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "name": "All",
+      "count": 8
+    },
+    {
+      "name": "FastFood",
+      "count": 3
+    },
+    {
+      "name": "Breakfast",
+      "count": 4
+    },
+    {
+      "name": "Dinner",
+      "count": 3
+    },
+    {
+      "name": "Lunch",
+      "count": 3
+    },
+    {
+      "name": "Idly",
+      "count": 1
+    },
+    {
+      "name": "toast",
+      "count": 1
+    },
+    {
+      "name": "Dosa",
+      "count": 0
+    },
+    {
+      "name": "Burger",
+      "count": 1
+    }
+  ],
+  "userAcc": [
+    {
+      "id": 1,
+      "name": "dummy",
+      "email": "dummy@gmail.com",
+      "password": "827ccb0eea8a706c4c34a16891f84e7b",
+      "role": "User"
+    },
+    {
+      "name": "ab",
+      "email": "abc@gm.co",
+      "password": "6531401f9a6807306651b87e44c05751",
+      "role": "User",
+      "id": 2
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@gma.co",
+      "password": "e807f1fcf82d132f9bb018ca6738a19f",
+      "role": "User",
+      "id": 3
+    },
+    {
+      "name": "asdf",
+      "email": "asdf@gm.co",
+      "password": "827ccb0eea8a706c4c34a16891f84e7b",
+      "role": "User",
+      "id": 4
+    },
+    {
+      "name": "qwerty",
+      "email": "qwerty@gmail.com",
+      "password": "d8578edf8458ce06fbc5bb76a58c5ca4",
+      "role": "User",
+      "id": 5
+    },
+    {
+      "name": "poio",
+      "email": "poi@gm.co",
+      "password": "d6e1c05c8a81c2ae74c7aedea5ec92c1",
+      "role": "User",
+      "id": 6
+    },
+    {
+      "name": "qwe",
+      "email": "qwe@gm.co",
+      "password": "76d80224611fc919a5d54f0ff9fba446",
+      "role": "User",
+      "id": 7
+    },
+    {
+      "name": "qwertyui",
+      "email": "qwwryy@gm.com",
+      "password": "e86fdc2283aff4717103f2d44d0610f7",
+      "role": "User",
+      "id": 8
+    },
+    {
+      "name": "sjkdhfjh",
+      "email": "kjbdskjdf@gm.co",
+      "password": "b76b17a1ae0432d7d9099b0833b60ceb",
+      "role": "User",
+      "id": 9
+    },
+    {
+      "name": "dfgdg",
+      "email": "fgf@gm.co",
+      "password": "b626c38313ea10b23ed7e1657b741435",
+      "role": "User",
+      "id": 10
+    },
+    {
+      "name": "jkshkjsh",
+      "email": "kjjssss@gm.co",
+      "password": "c9f6de79e406a387d5628c34b6420556",
+      "role": "User",
+      "id": 11
+    }
+  ],
+  "Orders": [
+    {
+      "cartItem": [
+        {
+          "food": {
+            "id": 1,
+            "price": 10,
+            "name": "Pizza Pepperoni",
+            "favourite": false,
+            "star": "4.5",
+            "tags": [
+              "FastFood",
+              "Pizza",
+              "Lunch"
+            ],
+            "imageUrl": "/assets/pizza.jpg",
+            "cookTime": "10 - 20",
+            "origins": [
+              "Italy"
+            ]
+          },
+          "quantity": 3,
+          "price": 30
+        }
+      ],
+      "customer": {
+        "customerName": "sdfsdf",
+        "customerEmail": "asdaf@gm.co",
+        "customerAddress": "23 34 dgdg , dfgg"
+      },
+      "payment": "COD",
+      "showChild": false,
+      "total": 30,
+      "id": 1663870727
+    },
+    {
+      "cartItem": [
+        {
+          "food": {
+            "id": 3,
+            "price": 30,
+            "name": "Idly",
+            "favourite": true,
+            "star": "2.5",
+            "tags": [
+              "Breakfast",
+              "Idly",
+              "Dinner"
+            ],
+            "imageUrl": "/assets/idli.jpg",
+            "cookTime": "10 - 15",
+            "origins": [
+              "Indian"
+            ]
+          },
+          "quantity": 5,
+          "price": 150
+        }
+      ],
+      "customer": {
+        "customerName": "ggr",
+        "customerEmail": "rtr@gm.com",
+        "customerAddress": "45 656 fhtj utyut tyutyut"
+      },
+      "payment": "Credit Card",
+      "showChild": false,
+      "total": 150,
+      "id": 1663871093
+    },
+    {
+      "cartItem": [
+        {
+          "food": {
+            "id": 4,
+            "price": 50,
+            "name": "French Toast",
+            "favourite": true,
+            "star": "3.7",
+            "tags": [
+              "FastFood",
+              "toast",
+              "Breakfast"
+            ],
+            "imageUrl": "/assets/french-toast.jpg",
+            "cookTime": "10 - 25",
+            "origins": [
+              "France",
+              "Italy"
+            ]
+          },
+          "quantity": 4,
+          "price": 200
+        },
+        {
+          "food": {
+            "id": 5,
+            "price": 25,
+            "name": "Hamburger",
+            "favourite": false,
+            "star": "4.8",
+            "tags": [
+              "Burger",
+              "Lunch",
+              "Dinner"
+            ],
+            "imageUrl": "/assets/hamburger.jpg",
+            "cookTime": "15 - 25",
+            "origins": [
+              "U.S",
+              "UK"
+            ]
+          },
+          "quantity": 3,
+          "price": 75
+        },
+        {
+          "food": {
+            "id": 3,
+            "price": 30,
+            "name": "Idly",
+            "favourite": true,
+            "star": "2.5",
+            "tags": [
+              "Breakfast",
+              "Idly",
+              "Dinner"
+            ],
+            "imageUrl": "/assets/idli.jpg",
+            "cookTime": "10 - 15",
+            "origins": [
+              "Indian"
+            ]
+          },
+          "quantity": 4,
+          "price": 120
+        },
+        {
+          "food": {
+            "id": 7,
+            "price": 30,
+            "name": "Salad",
+            "favourite": true,
+            "star": "4.3",
+            "tags": [
+              "Breakfast",
+              "Salad"
+            ],
+            "imageUrl": "/assets/salad.jpg",
+            "cookTime": "12 - 30",
+            "origins": [
+              "Western",
+              "German"
+            ]
+          },
+          "quantity": 2,
+          "price": 60
+        }
+      ],
+      "customer": {
+        "customerName": "fghdfh",
+        "customerEmail": "fghgf@gmail.co",
+        "customerAddress": "78 fghf fghfh fghf"
+      },
+      "payment": "Debit card",
+      "showChild": false,
+      "total": 455,
+      "id": 1663871641
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

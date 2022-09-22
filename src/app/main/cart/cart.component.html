@@ -1,0 +1,103 @@
+<div class="container fixed-bottom mb-5" *ngIf="cart.totalCount == 0">
+  <div class="row mb-5">
+    <div class="col-sm-6 mx-auto text-center mb-5">
+        <p class="text-center fw-lighter fs-1">{{ emptyCartMsg }}</p>
+        <a class="btn btn-warning bg-gradient mb-5 mt-3 shadow" routerLink="/home"
+          >Go back Home</a
+        >
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-2" *ngIf="cart.totalCount != 0">
+  <div class="row">
+    <div class="col-sm-12 mx-auto">
+      <div class="row">
+        <div class="col-md-6">
+          <div
+            class="card mb-3 shadow"
+            style="max-width: 450px"
+            *ngFor="let item of cart.items"
+          >
+            <div class="row">
+              <div class="col-md-6">
+                <img
+                  src="{{ item.food.imageUrl }}"
+                  style="
+                    object-fit: cover;
+                    max-height: 12rem;
+                    min-height: 12rem;
+                    min-width: 13rem !important;
+                    max-width: 13rem;
+                  "
+                  class="rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="fw-lighter fs-3 float-start">
+                      {{ item.food.name }}
+                    </h5>
+                    <button
+                      class="btn float-end btn-danger bg-gradient shadow"
+                      (click)="removeFromCart(item)"
+                    >
+                      🗑
+                    </button>
+                  </div>
+                  <br />
+                  <div class="card-text float-start mt-2">
+                    <p class="fw-lighter fs-5">
+                      Price :&nbsp;{{
+                        item.food.price | currency: "INR"
+                      }}&nbsp;&nbsp;x {{ item.quantity }}&nbsp;&nbsp;=&nbsp;
+                      {{ item.price | currency: "INR" }}
+                    </p>
+                  </div>
+                  <br /><br /><br /><br />
+                  <select
+                    class="form-select shadow-none"
+                    #quantity
+                    id="floatingSelect"
+                    aria-label="Floating label select example"
+                    (change)="changeQuantity(item, quantity.value)"
+                  >
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md mt-4 mx-auto text-center p-2">
+            <p class="fw-light fs-3 mb-2">Details</p>
+            <hr />
+            <p class="mt-2 p-2">
+              <span class="float-start ms-3 fs-3"
+                >Total Price :
+                <span class="fw-normal fs-4">
+                  {{ cart.totalPrice | currency: "INR" }}</span
+                ></span
+              >
+              <span class="me-3 float-end fs-3"
+                >Total Count :
+                <span class="fw-normal fs-4"> {{ cart.totalCount }}</span></span
+              >
+            </p>
+          </div>
+          <div class="d-grid col-6 mx-auto text-center">
+            <a routerLink="/checkout" class="btn btn-warning bg-gradient mt-2 shadow-sm mb-2">
+              CheckOut
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-md-6 col-sm-7 mb-3">
+      <div class="card text-center shadow">
+        <div class="card-body">
+          <img
+            class="card-img shadow-sm"
+            src="{{ food.imageUrl }}"
+            style="object-fit: cover !important; max-height: 20rem"
+            alt="Food Images"
+          />
+          <div class="card-img-overlay">
+            <span
+              class="float-start ms-3 shadow mt-2 fs-5 fw-bold badge  text-bg-light bg-gradient {{
+                food.favourite ? 'text-danger' : 'text-muted'
+              }} me-2 "
+              >&#9829;</span
+            >
+          </div>
+          <div class="group-item mt-2 p-2">
+            <star-rating 
+            class="mt-2 ms-3 float-start"
+            *ngIf="food.star"
+            [value]="food.star"
+            [totalstars]="5"
+            checkedcolor="gold"
+            uncheckedcolor="grey"
+            size="25px"
+            [readonly]="true"
+          >
+          </star-rating>
+          <div class="mt-2 ms-4 text-muted">🕒 <strong>{{ food.cookTime }}</strong> minutes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-5">
+      <div class="text-center">
+        <p style="text-transform: uppercase;" class=" mb-2 fw-lighter fs-2">{{food.name}} </p>
+        <hr >
+        <div class="row mt-3 mb-3">
+          <div class="col-sm-6">
+            <a
+            routerLink="/tag/{{ tag }}"
+            class="me-2 mb-2 badge text-bg-warning fw-normal  bg-gradient"
+            *ngFor="let tag of food.tags"
+          >
+            {{ tag }}</a
+          > <br>
+          
+          </div>
+          <div class="col-sm-6">
+            <span class="text-muted mt-3 me-2 fw-normal fs-6" *ngFor="let origin of food.origins">
+              {{ origin }}
+            </span>
+          </div>
+        </div>
+        <p class="mt-4 mb-2  text-dark fw-lighter fs-3 ">Price : {{ food.price  | currency: "INR" }}</p>
+        <div class="d-grid col-6 mx-auto">
+          <button (click)="addToCart()"class="btn btn-secondary bg-gradient  mt-2 shadow-sm mb-2">Add to cart</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        
+        
+        <!-- <h1 class="card-title">{{ food.name }}</h1> -->

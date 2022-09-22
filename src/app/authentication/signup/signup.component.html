@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-6 mx-auto">
+      <div class="card shadow-lg">
+        <div class="card-header">
+          <div class="card-title text-center">
+            <h2 class="fw-light fs-3">
+              Sign-Up
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="signUpForm">
+            <label for="" class="mt-2 mb-2">
+              Name
+            </label>
+            <input type="text" placeholder="ex: Lp" formControlName="name" class="mb-2 form-control shadow-none">
+            <label for="" class="mb-2">
+              Email
+            </label>
+            <input type="email" class="form-control mb-2" formControlName="email" placeholder="ex: abc@gmail.com">
+            <label for="" class="mb-2">Password</label>
+            <input type="password" formControlName="password" class="form-control mb-3">
+            <div class="text-center mt-2">
+              <button (click)="signUpUser()" class="btn btn-success" type="submit" [disabled]="!signUpForm.valid">
+                SignUp
+              </button>
+              <button class="btn ms-3 btn-danger"  [disabled]="!signUpForm.valid" type="reset">Clear All</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
