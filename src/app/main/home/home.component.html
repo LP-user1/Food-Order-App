@@ -1,0 +1,38 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul class="mt-3">
+  <li *ngFor="let Food of food">
+    <a routerLink="/food/{{Food.id}}" class="shadow">
+      <img
+        src="{{ Food.imageUrl }}"
+        style="object-fit: cover !important; width: 15rem; height: 10rem"
+        alt="Food Images"
+      />
+      <div class="product-name_like mt-2">
+        <p class=" fs-4 ms-2 float-start" style="text-transform: capitalize">
+          {{ Food.name }}
+        </p>
+        <span class="float-end {{Food.favourite?'fav':'not-fav'}} me-2 ">&#9829;</span>
+      </div>
+        <div class="text-center">
+          <star-rating
+            [value]="Food.star"
+            [totalstars]="5"
+            checkedcolor="gold"
+            uncheckedcolor="grey"
+            size="22px"
+            [readonly]="true"
+          ></star-rating>
+          <div class="product-footer">
+            <span  *ngFor="let origin of Food.origins" class="text-secondary">
+              {{ origin }} </span
+            ><br />
+            <span class="mt-2">
+              🕒 <span>{{ Food.cookTime }}m</span> </span
+            >&nbsp;
+            <span class="mt-2"> {{ Food.price | currency: "INR" }} </span>
+          </div>
+        </div>
+    </a>
+  </li>
+</ul>

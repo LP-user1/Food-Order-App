@@ -1,0 +1,103 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-5 mx-auto">
+      <div class="card shadow-lg">
+        <div class="card-header">
+          <div class="card-title text-center">
+            <h2 class="fw-light fs-3">Sign-Up</h2>
+          </div>
+        </div>
+        <div class="card-body px-5 py-3">
+          <form [formGroup]="signUpForm" class="" [ngClass]="signUpForm.valid?'was-validated':''" novalidate>
+            <div class="form-group mb-2">
+              <label for="name" class="form-label"> Name </label>
+              <input
+                type="text"
+                id="name"
+                placeholder="ex: Lp"
+                formControlName="name"
+                class=" form-control"
+                [ngClass]="Name.errors?.required && (Name.touched || Name.dirty) || Name.errors?.pattern?'is-invalid':''"
+              />
+              <span
+                class="text-danger"
+                *ngIf="Name.errors?.required && (Name.touched || Name.dirty)"
+                >* required fields can't be null</span
+              >
+              <span class="text-danger" *ngIf="Name.errors?.pattern"
+                >* a-z A-Z characters only accepted</span
+              >
+            </div>
+            <div class="form-group mb-2">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control "
+                [ngClass]="Email.errors?.required && (Email.touched || Email.dirty)?'is-invalid':''"
+                formControlName="email"
+                placeholder="ex: abc@gmail.com"
+              />
+              <span
+                class="text-danger"
+                *ngIf="Email.errors?.required && (Email.touched || Email.dirty)"
+                >* required fields can't be null</span
+              >
+              <span class="text-danger" *ngIf="Email.errors?.email"
+                >* Invalid email</span
+              >
+            </div>
+            <div class="form-group mb-2">
+              <label for="pas" class="form-label">Password</label>
+              <input
+                type="password"
+                id="pas"
+                formControlName="password"
+                class="form-control mb-3"
+                [ngClass]="Password.errors?.required && (Password.touched || Password.dirty)?'is-invalid':''"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  Password.errors?.required &&
+                  (Password.touched || Password.dirty)
+                "
+                >* required fields can't be null</span
+              >
+            </div>
+            <div class="form-group mb-2">
+              <label for="pas1" class="form-label">Confirm Password</label>
+              <input
+                type="password"
+                id="pas1"
+                formControlName="password1"
+                class="form-control mb-3"
+                [ngClass]="Password1.errors?.required && (Password1.touched || Password1.dirty)?'is-invalid':''"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  Password1.errors?.required &&
+                  (Password1.touched || Password1.dirty)
+                "
+                >* required fields can't be null</span
+              >
+              <br>
+              <span class="text-danger" *ngIf="(Password1.touched || Password1.dirty) && signUpForm.errors?.['misMatch']">* Password doesn't same</span>
+            </div>
+            <div class="text-center ">
+              <button
+                (click)="signUpUser()"
+                class="btn btn-primary btn-block bg-gradient"
+                type="submit"
+                [disabled]="!signUpForm.valid"
+              >
+                SignUp
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

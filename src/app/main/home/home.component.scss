@@ -1,0 +1,34 @@
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a{
+  height: 17rem;
+  width: 15rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column !important;
+  overflow: hidden;
+  color: black;
+}
+
+li a img:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+div.product-name_like span.fav{
+  color: red;
+  font-size:2rem;
+}
+
+div.product-name_like span.not-fav{
+  color:rgb(160, 160, 160);
+  font-size:2rem;
+}

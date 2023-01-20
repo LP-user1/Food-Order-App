@@ -1,0 +1,20 @@
+<div class="container mt-1 mb-3" *ngIf="tags">
+  <div class="row">
+    <div class="col-sm-12 col-sm-6 mx-auto">
+      <div class="text-center">
+        <a
+          id="tagName"
+          routerLink="/tag/{{ tag.name }}"
+          class="btn btn-secondary mt-2 me-3 "
+          *ngFor="let tag of tags"
+          style="text-transform: capitalize"
+        >
+          {{ tag.name }}
+          <span id="tagCount" class="badge text-bg-primary"
+            >{{ tag.count }}
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

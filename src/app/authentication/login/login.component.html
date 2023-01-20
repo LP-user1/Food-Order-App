@@ -1,0 +1,55 @@
+<div class="fixed-bottom mb-5">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-sm-5 mx-auto mb-5">
+        <div class="card shadow">
+          <div class="card-header text-center">
+            <p class="display-4">Login</p>
+          </div>
+          <div class="card-body py-2 px-4 ">
+            <form [formGroup]="loginForm" class="" [ngClass]="loginForm.valid?'was-validated':''">
+              <div class="form-group mb-2">
+                <label class="form-label" for="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Enter your email"
+                  class="form-control"
+                  [ngClass]="Email.errors?.required && (Email.touched || Email.dirty)?'is-invalid':''"
+                  formControlName="email"
+                />
+                <span class="text-danger" *ngIf="Email.errors?.required && (Email.touched || Email.dirty)">
+                  *required fields cannot be null!
+                </span>
+                <span class="text-danger" *ngIf="Email.errors?.email">* Invalid email id</span>
+              </div>
+              <div class="form-group">
+                <label for="pas" class="form-label">Password</label>
+              <input
+                type="password"
+                id="pas"
+                formControlName="password"
+                class="form-control mb-3"
+                [ngClass]="Passwd.errors?.required && (Passwd.touched || Passwd.dirty)?'is-invalid':''"
+                />
+                <span class="text-danger" *ngIf="Passwd.errors?.required && (Passwd.touched || Passwd.dirty)">
+                  *required fields cannot be null!
+                </span>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block bg-gradient"
+                  (click)="loginUser()"
+                  [disabled]="!loginForm.valid"
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
